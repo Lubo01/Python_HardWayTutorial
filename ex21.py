@@ -38,6 +38,8 @@ print "That becomes: ", what, "Can you do it by hand?"
 
 #now, we use normal formula for "puzzle":
 what2 = age + (height - (weight * (iq / 2)))
+
+
 print what2
 
 #now, we try simple formula:
