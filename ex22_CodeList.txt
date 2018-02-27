@@ -1,0 +1,136 @@
+#My Python Code List (ex22)
+
+print "..." / '...'		#write a statement as a string with double or single quotes
+	print "...", abc	#print writes also numbers or variables, separate by comma
+
+#comment...				#comment symbol, after # the text is ignored by Python
+
+Operators: (math symbols):
+	addition +
+	subtraction -
+	division / (slash)
+	multiplication * (asterisk)
+	modulus (remainder) % (operator returns the remainder of the division)
+	# comparison (>,<,>=,<=) returns True or False values
+	comparison: less-than <		
+	comparison: greater-than >
+	comparison: less-than-equal <=
+	comparison: greater-than-equal >=
+
+decimal number:	use decimal number in input to get result with decimal number
+	e.g. print 5.0/2 #result 2.5
+	
+Variables declaration:
+# The = (single-equal) assigns the value on the right to a variable on the left.
+	e.g. cars = 100
+
+# The == (double-equal) tests if two things have the same value.
+
+Formatters:
+# % (modulo) + letter -> are "formatters"
+# They tell Python to take the variable on the right and put it in to replace the %s with its value.
+# formatting characters with % put values or variable values inside the string
+	e.g. print "Let's talk about %s." % my_name		#% converts variable value to string
+		 x = "There are %d types of people." % 10	#% converts a number into string
+	%r	#format and returns the raw value from code as stored
+	%s	#format and returns the value to display for user
+	%d	#format number (decimal)
+	
+True or False (bool i.e. boolean type)
+	e.g. hilarious = True 	# boolean type of variable 
+# connection of 2 variables (different types: string + boolean) with %, instead of + (result without space)
+# % makes conversion of boolean (or other variable type except string) into string for printing result
+	e.g. print joke_evaluation % hilarious
+	
+Repetition in print:
+	print "." * 10 # what`d that do? repetition of dot 10 times
+	
+New Line: put "\n" for a new line in printing code
+
+Block of text: """..."""  
+#three double quotes (without spaces) enable to put more text in between, even in more lines
+
+#\t adds a horizontal tab into result
+#\\ escapes one \ and print the other \
+
+Input data from user:
+	variable = raw_input()	#takes input from user (as a string)
+	OR variable = int(raw_input())	#takes input from user (as an integer number)
+		(alternative: float(raw_input) #takes input as decimal number)
+	OR	variable = raw_input("Question to user?") 	#prompts user what to type
+
+#Import of feature argv (argument variable) from module sys:
+#Remember that modules give you features. 
+	from sys import argv	#we import a feature argv from module sys
+	script, first, second, third = argv		
+	#script is the filename, other variables could mean file or variable
+	e.g. print "The script is called:", script	#prints result
+	#Run the script with argv (file.py) as follows: 
+	#python filename.py variable1 variable2 ...	#we define argument variables
+
+open(filename)	#if opened directly in Python, put quotes: open("filename")
+	#read the file content and print it to screen with command read()
+	e.g. print variable.read()	#works also directly as: print open(filename).read()
+	#close the opened file
+	open(filename).close()
+	
+	target = open (filename, 'w')	#open the file in write mode 'w' - this mode overwrites existing file
+	#basic file modes to open:
+	# r	reading only
+	# w writing only, overwrites existing content
+	# a append, adds text to the end of file
+	# basic combinations:
+	# r+ enables writing at the beginning of the file
+	# w+ enables reading, but overwrites file with new content
+	# a+ enables reading
+
+truncate()	#erase (empty) content of the file: open(filename,'w').truncate()
+seek(0)		#seek the beginning of the file, the byte 0 (zero)
+
+from os.path import exists	#checks if the file exists
+	e.g. print "Does the output file exist? %r" % exists(filename)
+	
+Copy file content to another file with open(filename,'w').write:
+	e.g. print "Copying from %s to %s" % (from_file, to_file)
+	indata = open(from_file).read()
+	open(to_file, 'w').write(indata)
+	
+#Functions do three things:
+	# 1. They name pieces of code the way variables name strings and numbers.
+	# 2. They take arguments the way your scripts take argv.
+	# 3. Using 1 and 2 they let you make your own "mini-scripts" or "tiny commands."
+
+Function definition:
+	1 def function_name(argument1,argument2):
+	2	print "result with arguments %r" % (argument1,argument2)	#function body is indented
+
+Function call (run / use):
+	1 function_name(argument1,argument2)
+	e.g. function1(20, 30)	#we put argument values directly for the whole function
+	OR, we can use variables from our script:
+	variable1 = 10
+	variable2 = 50
+	#we call a function, while using variable values for arguments
+	function1(variable1,variable2)
+	OR We can even do math inside too:
+	function1(10 + 20, 5 + 6)
+	And we can combine the two, variables and math:
+	function1(variable1 + 100, variable2 + 1000)
+
+	Function for reading file / line:
+	e.g. def print_a_line(line_count, f):
+			print line_count, f.readline()	#read one line from the file, specify the line number
+			
+			# current_line = current_line +1
+			OR current_line +=1	#shorter alternative for increment of variable current_line
+			
+Functions Return:
+	e.g. def add(a, b):
+			print "ADDING %d + %d" % (a, b)
+			return a + b	#return assigns the value to the variable which is calling the function 
+	
+	#set variables through calling functions and setting arguments
+	var = add(35, 5)
+	#print variable value, which we get from return statement within a function above
+	print "var: %d" % (var)
+	
