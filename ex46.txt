@@ -1,0 +1,14 @@
+46 A Project Skeleton
+
+Installing Python Packages
+
+1. pip from http://pypi.python.org/pypi/pip
+2. distribute from http://pypi.python.org/pypi/distribute
+3. nose from http://pypi.python.org/pypi/nose
+4. virtualenv from http://pypi.python.org/pypi/virtualenv
+
+Do not just download these packages and install them by hand.
+Instead, see how other people recommend you install these packages
+and use them for your particular system. The process will be different
+for most versions of Linux, OSX, and definitely different for Windows.
+
