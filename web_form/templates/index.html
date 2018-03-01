@@ -1,0 +1,23 @@
+$def with (greeting)
+
+<html>
+<!--Template for web exercise in html-->
+
+	<head>
+
+	<title> ex51 Web form </title>
+
+	</head>
+
+<body>
+
+$if greeting:
+	I just wanted to say <em style ="color: green; font-size: 2em;">$greeting</em>.
+$else:
+	<em>Hello</em> World!
+<br/><br/>
+<a href="/hello">link back to Hello page</a>
+<!--a href="http://localhost:8080/hello">back to Hello page</a-->
+</body>
+
+</html>
