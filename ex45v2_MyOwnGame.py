@@ -269,6 +269,7 @@ class Map (object):
 
 	# print "221** before game_start**"		
 game_start = Map("tournament")
+
 #print "**217 game_start:", game_start
 #game = Engine(game_start)
 #print "**219 game:", game
